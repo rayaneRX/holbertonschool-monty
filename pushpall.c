@@ -117,6 +117,12 @@ while (s[n])
 return (1);
 }
 
+/**
+ * no_int - checks if the type of character
+ * @s: token to check
+ *
+ * Return: 1 if digit, otherwise 0
+ */
 int no_int(char *s)
 {
 	int k;
