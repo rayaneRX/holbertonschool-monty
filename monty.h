@@ -53,7 +53,7 @@ void paller(stack_t **top, unsigned int line_number);
 void noper(stack_t **top, unsigned int l);
 int isEmpty(stack_t *head);
 void monty_pint(stack_t **stack, unsigned int line_number);
-void monty_pop(stack_t **stack, unsigned int line_number)
+void monty_pop(stack_t **stack, unsigned int line_number);
 
 void reader(char *file, stack_t **top);
 
