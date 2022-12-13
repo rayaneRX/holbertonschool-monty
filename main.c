@@ -14,6 +14,7 @@ int main(int ac, char *av[])
 	stack_t *top;
 
 	top = NULL;
+	
 	if (ac != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
