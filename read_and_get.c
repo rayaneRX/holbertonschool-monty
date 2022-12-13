@@ -58,6 +58,7 @@ opfun function(char *s)
 		{"push", pusher},
 		{"pall", paller},
 		{"pint", monty_pint},
+		{"pop", monty_pop},
 		{"nop", noper},
 		{NULL, NULL},
 	};
