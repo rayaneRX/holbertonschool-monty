@@ -13,7 +13,7 @@ char *tokener(stack_t **top, unsigned int line_number, char *line)
 {
 	char *instr, *func, *tok;
 
-	element = 0;
+
 	func = "push";
 	instr = strtok(line, "\n ");
 	if (instr == NULL)
@@ -22,13 +22,13 @@ char *tokener(stack_t **top, unsigned int line_number, char *line)
 	if (strcmp(instr, func) == 0)
 	{
 		tok = strtok(NULL, "\n ");
-		if (int_error(tok))
-			element = atoi(tok);
-		else
+		if (tok == NULL || no_int(tok))
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line_number);
 			_exit_(top);
 		}
+		if (int_error(tok))
+			element = atoi(tok);
 	}
 	return (instr);
 }
@@ -115,4 +115,18 @@ while (s[n])
 	n++;
 }
 return (1);
+}
+
+int no_int(char *s)
+{
+	int k;
+
+	for (k = 0; s[k]; k++)
+	{
+		if (s[k] == '-' && k == 0)
+			continue;
+		if (isdigit(s[k]) == 0)
+			return (1);
+	}
+	return (0);
 }
