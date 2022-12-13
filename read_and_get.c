@@ -18,7 +18,7 @@ void reader(char *file, stack_t **top)
 
 	if (f == NULL)
 	{
-		printf("Error: Can't open file %s\n", file);
+		fprintf(stderr, "Error: Can't open file %s\n", file);
 		_exit_(top);
 	}
 	while ((r = getline(&buff, &size, f)) != -1)
@@ -32,7 +32,7 @@ void reader(char *file, stack_t **top)
 		getter = function(line);
 		if (getter == NULL)
 		{
-			printf("L%d: unknown instruction %s\n", line_num, line);
+			fprintf(stderr, "L%d: unknown instruction %s\n", line_num, line);
 			_exit_(top);
 		}
 		getter(top, line_num);

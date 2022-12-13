@@ -13,6 +13,7 @@ char *tokener(stack_t **top, unsigned int line_number, char *line)
 {
 	char *instr, *func, *tok;
 
+	element = 0;
 	func = "push";
 	instr = strtok(line, "\n ");
 	if (instr == NULL)
@@ -25,7 +26,7 @@ char *tokener(stack_t **top, unsigned int line_number, char *line)
 			element = atoi(tok);
 		else
 		{
-			printf("L%dusage: push integer\n", line_number);
+			fprintf(stderr, "L%d: usage: push integer\n", line_number);
 			_exit_(top);
 		}
 	}
