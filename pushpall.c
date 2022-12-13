@@ -86,7 +86,7 @@ void paller(stack_t **top, unsigned int line_number)
 	(void)line_number;
 
 	temp = *top;
-	
+
 	while (temp)
 	{
 		printf("%d\n", temp->n);
