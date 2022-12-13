@@ -1,11 +1,14 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef MONTY_H
+#define MONTY_H
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <ctype.h>
+
+extern int element;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -40,8 +43,20 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-stack_t *push(stack_t **top, int elem);
-void pall(stack_t *top);
+typedef void (*opfun)(stack_t **top, unsigned int line_number);
+opfun function(char *s);
+
+
+char *tokener(stack_t **top, unsigned int line_number, char *line);
+void pusher(stack_t **top, unsigned int line_number);
+void paller(stack_t **top, unsigned int line_number);
 int isEmpty(stack_t *head);
+
+void reader(char *file, stack_t **top);
+
+void _exit_(stack_t **top);
+void _free(stack_t *top);
+int int_error(char *s);
+
 
 #endif
