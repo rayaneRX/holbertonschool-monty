@@ -58,6 +58,7 @@ void reader(char *file, stack_t **top);
 void _exit_(stack_t **top);
 void _free(stack_t *top);
 int int_error(char *s);
+int no_int(char *s);
 
 
 #endif
