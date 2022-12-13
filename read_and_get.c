@@ -57,6 +57,7 @@ opfun function(char *s)
 	instruction_t ins[] = {
 		{"push", pusher},
 		{"pall", paller},
+		{"pint", monty_pint},
 		{NULL, NULL},
 	};
 

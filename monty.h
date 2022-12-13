@@ -51,6 +51,7 @@ char *tokener(stack_t **top, unsigned int line_number, char *line);
 void pusher(stack_t **top, unsigned int line_number);
 void paller(stack_t **top, unsigned int line_number);
 int isEmpty(stack_t *head);
+void monty_pint(stack_t **stack, unsigned int line_number);
 
 void reader(char *file, stack_t **top);
 
