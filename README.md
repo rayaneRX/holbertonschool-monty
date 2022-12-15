@@ -71,7 +71,7 @@ typedef struct instruction_s
 } instruction_t;
 ````
 ## Tasks
-### **0. push, pall**
+## **0. push, pall**
 
 Implement the `push`and `pall` opcodes.
 
@@ -103,7 +103,7 @@ julien@ubuntu:~/monty$ ./monty bytecodes/00.m
 1
 julien@ubuntu:~/monty$
 ````
-### **1. pint**
+## **1. pint**
 
 Implement the `pint` opcode.
 
@@ -127,7 +127,7 @@ julien@ubuntu:~/monty$ ./monty bytecodes/06.m
 3
 julien@ubuntu:~/monty$ 
 ````
-### **2. pop**
+## **2. pop**
 
 Implement the `pop` opcode.
 
@@ -158,7 +158,7 @@ julien@ubuntu:~/monty$ ./monty bytecodes/07.m
 1
 julien@ubuntu:~/monty$ 
 ````
-### **3. swap**
+## **3. swap**
 
 Implement the `swap` opcode.
 
@@ -185,7 +185,7 @@ julien@ubuntu:~/monty$ ./monty bytecodes/09.m
 1
 julien@ubuntu:~/monty$ 
 ````
-### **4. add**
+## **4. add**
 
 Implement the `add` opcode.
 
@@ -215,11 +215,12 @@ julien@ubuntu:~/monty$ ./monty bytecodes/12.m
 1
 julien@ubuntu:~/monty$
 ````
-### **5. nop**
+## **5. nop**
 
 Implement the `nop` opcode.
 
-The `nop` opcode
+The `n
+op` opcode
 
 The opcode `nop` doesn’t do anything.
 
