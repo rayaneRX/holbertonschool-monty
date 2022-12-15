@@ -219,8 +219,7 @@ julien@ubuntu:~/monty$
 
 Implement the `nop` opcode.
 
-The `n
-op` opcode
+The `nop` opcode
 
 The opcode `nop` doesn’t do anything.
 
